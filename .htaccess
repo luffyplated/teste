@@ -1,0 +1,8 @@
+<FilesMatch "\.(?:inc.php)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+Options -Indexes
+
+RewriteRule ^([^/\.]+)/?$ $1.php [L,QSA]
